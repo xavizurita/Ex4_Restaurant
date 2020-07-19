@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<title>Exercici4_REST_Fase2</title>
+       
+    <script>
+        
+        var menu = new Array(2);
+        var preu = new Array(2);
+        largomenu = menu.length;
+        var totalmenjar=0;
+		var Bill500=0;
+		var Bill200=0;
+		var Bill100=0;
+		var Bill050=0;
+		var Bill020=0;
+		var Bill010=0;
+        var Bill005=0;
+         var inici=0;
+        
+        for (inici=0; inici<largomenu; inici++) {
+            menu[inici]=prompt('dime el nombre MENÚ número: '+ (inici));
+            preu[inici]=prompt('dime el PRECIO del menú: '+ menu[inici] );
+        }
+        document.write("<br>" + "- - - Llista de menus i preus - - - " + "<br>");
+        document.write("<br>" + "</br>");
+
+        for (inici=0; inici<largomenu; inici++) {
+            document.write("Menú núm ==> (" + inici + ") - " + menu[inici] + " " + preu[inici] + "€" );
+            document.write("<br>" + " " + "</br>");
+        }
+       
+    </script>
+    <script>
+        var comanda = new Array();
+        var finalcomanda = 1;
+        var valorcomanda ="";
+        var fc = 0;
+        while (finalcomanda == 1) {
+            valorcomanda=prompt('dime el NÚMERO MENÚ que queires');
+            comanda.push(valorcomanda);
+            fc=prompt("quieres otro plato?  pulsa (1) para SI -- (2) para NO ")
+            finalcomanda=fc;
+        }
+
+    document.write("- - - Final de comanda - - -");
+    largomenu = comanda.length;
+    for (inici=0; inici<largomenu; inici++) {
+        document.write("Comanda de Menú núm ==> (" + comanda[inici] + ") - " );
+        document.write("<br>" + " " + "</br>");
+        }
+   
+	
+    </script>
+</head>
+<body>
+</body>
+</html>
